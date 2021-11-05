@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Product, ProductPhoto, OutOfStock, OOStext, Photodiv, PhotodivOOS, CartIcon, CartIconDiv } from './productCardCSS';
-import  Cart  from "./../../assets/images/cart.svg"
+import  {ReactComponent as Cart}  from "./../../assets/images/cart.svg"
 
 class ProductCard extends Component {
 
@@ -16,7 +16,7 @@ class ProductCard extends Component {
           </Photodiv>
           {this.props.product.inCart ?(
             <CartIconDiv>
-              <CartIcon><img style={{height:"20px"}} src={Cart}/></CartIcon>
+              <CartIcon><Cart style={{height: "20px", fill: "white"}}/></CartIcon>
             </CartIconDiv>
           ): null }
           <p>{this.props.product.name}</p>
