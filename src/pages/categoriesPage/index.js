@@ -1,30 +1,51 @@
 import React, { Component } from 'react'
-import { Title, Container, ProductsWrapper, Item, ItemNameWrapper } from './CategoriesCSS';
-import image from "./../../assets/images/placeholder.png"
+import { Title, Container, ProductsWrapper, Item, ItemNameWrapper } from './categoriesCSS';
+import  ProductCard  from './../../components/productCard';
 
 class CategoriesPage extends Component {
 
   products = [
     {name: "coisa 1",
-    price: "$50.00"
+    price: "$50.00",
+    photo: "https://picsum.photos/512?random=",
+    inStock: true,
+    inCart: false,
     },
     {name: "coisa 2",
-    price: "$50.00"
+    price: "$50.00",
+    photo: "https://picsum.photos/512?random=",
+    inStock: true,
+    inCart: true,
     },
     {name: "coisa 3",
-    price: "$50.00"
+    price: "$50.00",
+    photo: "https://picsum.photos/512?random=",
+    inStock: true,
+    inCart: false,
     },
     {name: "coisa 4",
-    price: "$50.00"
+    price: "$50.00",
+    photo: "https://picsum.photos/512?random=",
+    inStock: false,
+    inCart: false,
     },
     {name: "coisa 5",
-    price: "$50.00"
+    price: "$50.00",
+    photo: "https://picsum.photos/512?random=",
+    inStock: true,
+    inCart: false,
     },
     {name: "coisa 6",
-    price: "$50.00"
+    price: "$50.00",
+    photo: "https://picsum.photos/512?random=",
+    inStock: false,
+    inCart: false,
     },
     {name: "coisa 7",
-    price: "$50.00"
+    price: "$50.00",
+    photo: "https://picsum.photos/512?random=",
+    inStock: true,
+    inCart: false,
     },
 
   ];
@@ -35,12 +56,7 @@ class CategoriesPage extends Component {
         <Title>Category name</Title>
         <ProductsWrapper>
         {this.products.map( (product, index) => (
-          <Item key={index}>
-            {/*<img src={require(product.image)}/>*/}
-            <img style={{width: "-webkit-fill-available"}} src={image}/>
-              <p>{product.name}</p>
-              <p>{product.price}</p>
-          </Item>
+          <ProductCard product={product} index={index}></ProductCard>
         ))}
         </ProductsWrapper>
       </Container>

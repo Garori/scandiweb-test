@@ -14,8 +14,6 @@ export const Container = styled.div`
 export const ProductsWrapper = styled.div`
  display: grid;
  grid-template-columns: auto auto auto;
-`;
+ /* width:100%; */
 
-export const Item = styled.div`
-  padding: 2vw;
 `;
